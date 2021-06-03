@@ -26,16 +26,19 @@ function addElement() {
     ul.appendChild(li)
 
     nameItem.value = ''
+    nameItem.focus();
     addFunctionDeleteButton();
     addFunctionCheckButton();
 }
 
 function deleteProduto() {
     this.parentElement.remove();
+    nameItem.focus();
 }
 
 function checkProduto() {
     this.parentElement.style = "text-decoration: line-through;" + "color: #F0E68C;"
+    nameItem.focus();
 }
 
 function addFunctionCheckButton() {
