@@ -1,5 +1,6 @@
 {
     "cSpell.ignoreWords": [
         "preconnect"
-    ]
+    ],
+    "liveServer.settings.port": 5501
 }

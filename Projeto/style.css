@@ -23,40 +23,54 @@ h1 {
     font-size: 30px;
     padding: 0px;
     margin: 0;
+    margin-bottom: 10px;
 }
 
 .inputs {
     background-color: rgb(71, 179, 155);
-    height: 50px;
+    height: 40px;
     display: flex;
     align-items: center;
 }
 
-input {
-    padding: 0.5em;
+#name-item {
     width: 300px;
+    height: 100%;
     border: none;
     border-radius: 5px;
+    font-size: 20px;
 }
 
 #btn-add-item {
-    padding: 0.5em;
     margin-left: 20px;
     width: 100px;
+    height: 100%;
     border: none;
     border-radius: 5px;
-    background-color: rgb(253, 248, 171);
-}
-
-.delete {
-    border: none;
-    border-radius: 5px;
-    background-color: rgb(253, 248, 171);
-    margin-right: 10px;
+    background-color: #F0E68C;
+    font-family: 'Kalam', cursive;
+    font-size: 20px;
 }
 
 ul {
-    font-size: 25px;
     padding: 0;
     list-style: none;
+    text-transform: uppercase;
+}
+
+.delete, .check {
+    padding: 0;
+    width: 25px;
+    border: none;
+    border-radius: 5px;
+    background-color: #F0E68C;
+    margin-right: 10px;
+    height: 100%;
+}
+
+li {
+    padding: 0;
+    margin-bottom: 10px;
+    height: 25px;
+    font-size: 20px;
 }
