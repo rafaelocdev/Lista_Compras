@@ -23,7 +23,8 @@ function addElement() {
     deleteButton.alt = "Deletar";
     deleteButton.className = "btn-delete";
 
-    divCheckName.style.display = "flex"
+    divCheckName.style.display = "flex";
+    divCheckName.id = "unchecked";
 
     p.className = "name-item";
     
@@ -47,9 +48,17 @@ function deleteProduto() {
 }
 
 function checkProduto() {
-    this.parentElement.children[1].style = "text-decoration: line-through;" + "color: #F0E68C;"
-    this.parentElement.children[0].src = "/img/ticado.png"
-    this.parentElement.children[0].alt = "ticado"
+    if(this.parentElement.id == "unchecked") {
+        this.parentElement.id = "checked"
+        this.parentElement.children[1].style = "text-decoration: line-through;" + "color: #F0E68C;"
+        this.parentElement.children[0].src = "/img/ticado.png"
+        this.parentElement.children[0].alt = "ticado"
+    } else {
+        this.parentElement.id = "unchecked"
+        this.parentElement.children[1].style = "text-decoration: ''"
+        this.parentElement.children[0].src = "/img/no_ticado.png"
+        this.parentElement.children[0].alt = "não ticado"
+    }
     nameItem.focus();
 }
 
