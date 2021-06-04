@@ -6,37 +6,44 @@ let listButtonCheck = document.getElementsByClassName('btn-check');
 let listNameCheck = document.getElementsByClassName('name-item');
 
 function addElement() {
-    let li = document.createElement('li');
-    let checkButton = document.createElement('img')
-    let deleteButton = document.createElement('img');
-    let p = document.createElement('p');
-    let descriptionItem = document.createTextNode(nameItem.value);
-    let divCheckName = document.createElement('div');
-
-    descriptionItem.style = "text: upper";
-
-    checkButton.src = "/img/no_ticado.png";
-    checkButton.alt = "não-ticado";
-    checkButton.className = "btn-check";
-
-    deleteButton.src = "/img/trash.png";
-    deleteButton.alt = "Deletar";
-    deleteButton.className = "btn-delete";
-
-    divCheckName.style.display = "flex";
-    divCheckName.id = "unchecked";
-
-    p.className = "name-item";
+    if(nameItem.value !== ""){
+        let li = document.createElement('li');
+        let checkButton = document.createElement('img')
+        let deleteButton = document.createElement('img');
+        let p = document.createElement('p');
+        let descriptionItem = document.createTextNode(nameItem.value);
+        let divCheckName = document.createElement('div');
     
-    p.append(descriptionItem);
-    divCheckName.appendChild(checkButton);
-    divCheckName.appendChild(p);
-    li.appendChild(divCheckName);
-    li.appendChild(deleteButton);
+        descriptionItem.style = "text: upper";
+    
+        checkButton.src = "/img/no_ticado.png";
+        checkButton.alt = "não-ticado";
+        checkButton.className = "btn-check";
+    
+        deleteButton.src = "/img/trash.png";
+        deleteButton.alt = "Deletar";
+        deleteButton.className = "btn-delete";
+    
+        divCheckName.style.display = "flex";
+        divCheckName.id = "unchecked";
+    
+        p.className = "name-item";
+        
+        p.append(descriptionItem);
 
-    ul.appendChild(li)
+        divCheckName.appendChild(checkButton);
+        divCheckName.appendChild(p);
 
-    nameItem.value = ''
+        li.appendChild(divCheckName);
+        li.appendChild(deleteButton);
+    
+        ul.appendChild(li)            
+        
+        nameItem.value = ''
+    }else {
+        alert("Digite algum produto!!!")
+    }
+
     nameItem.focus();
     addFunctionDeleteButton();
     addFunctionCheckButton();
