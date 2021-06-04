@@ -1,4 +1,4 @@
-﻿let nameItem = document.getElementById('name-item');
+﻿let nameItem = document.getElementById('input-name-item');
 let btnAddItem = document.getElementById('btn-add-item');
 let ul = document.getElementById('list-items');
 let listItemsDelete = document.getElementsByClassName('delete');
@@ -6,23 +6,27 @@ let listButtonCheck = document.getElementsByClassName('check')
 
 function addElement() {
     let li = document.createElement('li');
-    let checkButton = document.createElement('button')
+    let checkButton = document.createElement('img')
     let deleteButton = document.createElement('button');
+    let p = document.createElement('p');
     let descriptionItem = document.createTextNode(nameItem.value);
 
-    descriptionItem.style = "text: upper"
+    descriptionItem.style = "text: upper";
 
-    checkButton.innerHTML = "OK"
-    checkButton.className = "check"
+    checkButton.src = "/img/no_ticado.png";
+    checkButton.alt = "não-ticado";
+    checkButton.className = "check";
 
     deleteButton.innerHTML = "X";
     deleteButton.className = "delete";
+
+    p.className = "name-item"
     
+    p.append(descriptionItem);
     li.appendChild(checkButton);
     li.appendChild(deleteButton);
+    li.appendChild(p);
 
-
-    li.appendChild(descriptionItem);
     ul.appendChild(li)
 
     nameItem.value = ''
@@ -37,7 +41,9 @@ function deleteProduto() {
 }
 
 function checkProduto() {
-    this.parentElement.style = "text-decoration: line-through;" + "color: #F0E68C;"
+    this.parentElement.children[2].style = "text-decoration: line-through;" + "color: #F0E68C;"
+    this.checkButton.src = "/img/ticado.png"
+    this.checkButton.alt = "ticado"
     nameItem.focus();
 }
 

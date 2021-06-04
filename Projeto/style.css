@@ -33,7 +33,7 @@ h1 {
     align-items: center;
 }
 
-#name-item {
+#input-name-item {
     width: 300px;
     height: 100%;
     border: none;
@@ -58,6 +58,18 @@ ul {
     text-transform: uppercase;
 }
 
+li {
+    padding: 0;
+    display: flex;
+    margin-bottom: 10px;
+    height: 25px;
+    font-size: 20px;
+}
+
+img {
+    height: 100px;
+}
+
 .delete, .check {
     padding: 0;
     width: 25px;
@@ -68,9 +80,8 @@ ul {
     height: 100%;
 }
 
-li {
+p {
     padding: 0;
-    margin-bottom: 10px;
-    height: 25px;
-    font-size: 20px;
+    margin: 0;
 }
+
