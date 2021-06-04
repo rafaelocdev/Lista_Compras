@@ -1,0 +1,106 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(21, 24, 24);
+    font-family: 'Kalam', cursive;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container-list-item {
+    background-color: rgb(71, 179, 155);
+    width: 400px;
+    padding: 1em 2em;
+    border-radius: 20px;
+}
+
+h1 {
+    font-size: 30px;
+    padding: 0px;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.inputs {
+    background-color: rgb(71, 179, 155);
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+#input-name-item {
+    width: 300px;
+    height: 100%;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: 'Kalam', cursive;
+}
+
+#btn-add-item {
+    margin-left: 20px;
+    width: 100px;
+    height: 100%;
+    border: none;
+    border-radius: 5px;
+    background-color: #F0E68C;
+    font-family: 'Kalam', cursive;
+    font-size: 20px;
+}    
+
+.group-items {
+    padding: 0;
+    margin-left: 0;
+    width: 287px;    
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+    text-transform: uppercase;
+}    
+
+li {
+    padding: 0;
+    display: flex;
+    margin-bottom: 10px;
+    height: 25px;
+    font-size: 20px;
+    justify-content: space-between;
+}    
+
+img {
+    height: 100px;
+}    
+
+.btn-check {
+    padding: 0;
+    width: 25px;
+    border: none;
+    border-radius: 2px;
+    background-color: #F0E68C;
+    margin-right: 10px;
+    height: 100%;
+    cursor: pointer;
+}    
+
+.btn-delete{
+    padding: 0;
+    border: none;
+    height: 100%;
+    cursor: pointer;
+}    
+
+p {
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}   
+
+
+
