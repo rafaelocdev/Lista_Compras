@@ -16,11 +16,11 @@ function addElement() {
     
         descriptionItem.style = "text: upper";
     
-        checkButton.src = "/img/no_ticado.png";
+        checkButton.src = "img/no_ticado.png";
         checkButton.alt = "não-ticado";
         checkButton.className = "btn-check";
     
-        deleteButton.src = "/img/trash.png";
+        deleteButton.src = "img/trash.png";
         deleteButton.alt = "Deletar";
         deleteButton.className = "btn-delete";
     
@@ -58,12 +58,12 @@ function checkProduto() {
     if(this.parentElement.id == "unchecked") {
         this.parentElement.id = "checked"
         this.parentElement.children[1].style = "text-decoration: line-through;" + "color: #F0E68C;"
-        this.parentElement.children[0].src = "/img/ticado.png"
+        this.parentElement.children[0].src = "img/ticado.png"
         this.parentElement.children[0].alt = "ticado"
     } else {
         this.parentElement.id = "unchecked"
         this.parentElement.children[1].style = "text-decoration: ''"
-        this.parentElement.children[0].src = "/img/no_ticado.png"
+        this.parentElement.children[0].src = "img/no_ticado.png"
         this.parentElement.children[0].alt = "não ticado"
     }
     nameItem.focus();
